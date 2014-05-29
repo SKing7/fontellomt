@@ -1,0 +1,140 @@
+---
+# This is configuration file for font builder and other support scripts.
+# Format is descriped below.
+#
+#
+# # metadata, to generate demo & fontello info dialogs
+# meta:
+#
+#  author: Daniel Buce
+#  homepage: http://...
+#  email: ...
+#  twitter: http://twitter.com/...
+#  dribbble: http://dribbble.com/...
+#  license: SIL
+#  license_url: http://scripts.sil.org/OFL
+#
+#   css-prefix: "icon-"             # prefix for css-generated classes
+#   demo-columns: 4                 # used for html demo page generation
+#
+# # Font headers. All vars from here will be used as font
+# # params in fontforge http://fontforge.sourceforge.net/python.html
+# font:
+#
+#   version: "1.0"
+#
+#   # use !!!small!!! letters a-z, or Opera will fail under OS X
+#   # fontname will be also used as file name.
+#   fontname: myfont
+#
+#   fullname: MyFont
+#   familyname: Myfont
+#
+#   copyright: Copyright (C) 2012 by xxxxxxxx
+#
+#   ascent: 1638
+#   descent: 410
+#   weight: Regular
+#
+#
+# #
+# # Optional. You can apply global rescale + offset to all font glyphs.
+# # Param values ar 0..1, where 1 = 100%. 
+# #
+# transform:
+#   baseline: 0.2                 # baseline for rescale symmetry. Default value
+#                                 # calculated from ascent/decsent
+#   rescale: 0.68                 # rescale glyphs and center around baseline
+#   offset: -0.1                  # shift up/down
+#
+# glyphs:
+#   - file: glyph1_file           # file name, without extention
+#     from: 0xNNN                 # Source code for remapper or merge tool
+#     code: 0xNNN                 # Symbol code 0x - hex
+#     css: icon-gpyph1-name       # For generated CSS
+#     search: [word1, word2]      # Search aliases (array). CSS name will be
+#                                 # included automatically
+#     src: first_font_alias       # alias to font for merge tool
+#                                 # list of aliases in src_fonts section
+#
+#     #
+#     # local transformations, only for this glyph (optional)
+#     #
+#     transform:                  # personal glyph transformation.
+#       rescale_rel               # *_rel - applyed after global.
+#       offset: 0.2               # without *_rel - override global
+#
+# #
+# # Fonts aliases used only in font merge tool
+# #
+# src_fonts:
+#   first_font_alias: "/absolute/path/to/first/font.ttf"
+#
+################################################################################
+#
+
+
+meta:
+  author: FEweb UED 
+  homepage: http://www.meituan.com 
+  license: SIL
+  license_url: http://scripts.sil.org/OFL
+
+  css_prefix_text: "icon-"
+  columns: 4
+
+#transform:
+#  baseline: 0.4
+#  rescale: 2.4
+
+font:
+  version: "2.0"
+
+  # use !!!small!!! letters a-z, or Opera will fail under OS X
+  # fontname will be also used as file name.
+  fontname: CommonUI
+
+  fullname: FEWeb
+  familyname: FeWeb
+
+  copyright: FEWeb UED
+
+  ascent: 850
+  descent: -150
+  weight: Normal
+
+
+glyphs:
+
+  -
+    css: tip-status-info 
+    code: 0xe800
+    uid: 7177bbabe960b0e33731eadd575593fd
+    meta:
+      author: Angela Berbentseva, specially for fontello
+      email: berbentseva_angela@yahoo.com
+    search: [tip, info]
+  -
+    css: tip-status-success 
+    code: 0xe802
+    uid: 898dcd3baa26e1657c7247013b72bcae
+    meta:
+      author: Angela Berbentseva, specially for fontello
+      email: berbentseva_angela@yahoo.com
+    search: [tip, success]
+  -
+    css: tip-status-error 
+    code: 0xe801
+    uid: 73147f7c9f8bf0a517e7f22e79867c66
+    meta:
+      author: Angela Berbentseva, specially for fontello
+      email: berbentseva_angela@yahoo.com
+    search: [tip, error]
+  -
+    css: tip-status-opinfo 
+    code: 0xe801
+    uid: f6a0ea1e4e12910eb633eadeb108c469
+    meta:
+      author: Angela Berbentseva, specially for fontello
+      email: berbentseva_angela@yahoo.com
+    search: [tip, opinfo]
